@@ -1,0 +1,42 @@
+<div class="page">
+  <div class="content">
+    <section id="presentation" class="presentation">
+      <div class="first-animation">
+        <span [innerHTML]="'PRESENTATION.LINE_1' | translate : { name: 'Vinícius' }"></span>
+      </div>
+      <div class="second-animation">
+        <span [innerHTML]="'PRESENTATION.LINE_2' | translate"></span>
+      </div>
+      <div class="third-animation margin-top">
+        <span>{{ 'PRESENTATION.LINE_3' | translate }}</span>
+      </div>
+      <div class="fourth-animation">
+        <div class="tech-stack">
+          @for (item of techStack; track item.name) {
+            <app-stack-item-button [item]="item"></app-stack-item-button>
+          }
+        </div>
+      </div>
+    </section>
+      <section id="about-me" class="fifth-animation">
+        <h2>{{ 'PRESENTATION.ABOUT.TITLE' | translate }}</h2>
+        <p class="about-me-paragraph">{{ 'PRESENTATION.ABOUT.P_1' | translate }}</p>
+        <p class="about-me-paragraph">{{ 'PRESENTATION.ABOUT.P_2' | translate }}</p>
+        <p class="about-me-paragraph">{{ 'PRESENTATION.ABOUT.P_3' | translate }}</p>
+        <p class="about-me-paragraph">{{ 'PRESENTATION.ABOUT.P_4' | translate }}</p>
+      </section>
+    
+      <section id="contact" class="fifth-animation">
+        <ol class="contact-list">
+          @for (item of contacts; track item.contact.name) {
+            <li>
+              <button class="contact-button" (click)="item.action()" target="_blank">
+                <i [class]="item.contact.icon"></i>
+                <span>{{ item.contact.name }}</span>
+              </button>
+            </li>
+          }
+        </ol>
+      </section>
+  </div>
+</div>

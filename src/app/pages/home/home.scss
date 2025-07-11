@@ -1,0 +1,114 @@
+.page {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  padding-top: 1rem;
+  max-width: 40rem;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.margin-top {
+  margin-top: 2rem;
+}
+
+.presentation {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 1.5rem;
+}
+
+.tech-stack {
+  margin-top: 1rem;
+  display: flex;
+  gap: 12px;
+  padding: 8px;
+  flex-wrap: wrap;
+  max-width: 35rem;
+}
+
+.about-me-paragraph {
+  white-space: pre-line;
+}
+
+.first-animation {
+  animation: fade-in-up 0.5s ease-in-out 0.2s both;
+}
+
+.second-animation {
+  animation: fade-in-up 0.5s ease-in-out 0.7s both;
+}
+
+.third-animation {
+  animation: fade-in-up 0.5s ease-in-out 1.2s both;
+}
+
+.fourth-animation {
+  animation: fade-in-up 0.5s ease-in-out 1.8s both;
+}
+
+.fifth-animation {
+  animation: fade-in-up 0.5s ease-in-out 2.3s both;
+}
+
+.contact-list {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.contact-button {
+  all: unset;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+
+  i {
+    font-size: 2rem;
+  }
+}
+
+.contact-button:hover {
+  transition: transform 0.3s ease;
+  transform: scale(1.1);
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 700px) {
+  .tech-stack {
+    flex-direction: column;
+  }
+
+  .contact-list {
+    flex-direction: column;
+  }
+
+  .presentation {
+    font-size: 1rem;
+  }
+}

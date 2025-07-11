@@ -1,0 +1,21 @@
+<div class="header">
+  <div class="header-content">
+    <span class="subject">Vinícius Licz</span>
+    <div class="right-content">
+      <app-select [options]="languages" [selected]="currentLang$ | async" (selectedChange)="onSelectLanguage($event)"></app-select>
+      <div class="buttons-panel">
+        @for (badge of contacts; track badge.contact.name) {
+          @if (badge.action) {
+            <button class="badge" (click)="badge.action()">
+              <i [class]="badge.contact.icon"></i>
+            </button>
+          } @else {
+            <a class="badge" [href]="badge.link" target="_blank">
+              <i [class]="badge.contact.icon"></i>
+            </a>
+          }
+        }
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+{
+  "PRESENTATION": {
+    "LINE_1": "Hello, my name is <b>{{name}}</b>.",
+    "LINE_2": "I work as a <i>fullstack</i> developer.",
+    "LINE_3": "I currently work with the following technologies:",
+    "ABOUT": {
+      "TITLE": "About me",
+      "P_1": "I've been working with development for a few years, but outside of work, I enjoy tinkering with technology on my own.",
+      "P_2": "Besides development, I'm also interested in infrastructure, networking, deployment, and automation.",
+      "P_3": "In my free time, I like to experiment with tech at home. I run some self-hosted services like a file server, media center, VPN... they serve as my personal lab.",
+      "P_4": "I also enjoy voxel art and occasionally try making some just for fun."
+    }
+  },
+  "MISC": {
+    "EMAIL_COPIED_SUCCESS": "Email copied!"
+  }
+}

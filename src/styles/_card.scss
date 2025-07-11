@@ -1,0 +1,12 @@
+.card {
+  background: var(--surface-card);
+  border: 1px solid var(--p-surface-700);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--card-shadow);
+  border-radius: var(--p-border-radius-xl);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

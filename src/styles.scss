@@ -1,0 +1,22 @@
+@use "primeicons/primeicons.css";
+@use './styles/export.scss';
+
+/* Global */
+html, body { 
+  height: 100%;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--font-color);
+  background: var(--surface-background);
+}
+
+h1, h2, h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}

@@ -1,0 +1,14 @@
+@use './_theme/colors.scss';
+@use './_theme/dark.scss';
+@use './_theme/light.scss';
+
+
+:root {
+  // border
+  --border-width: 1px;
+  --border-radius: 6px;
+
+  // transitions
+  --transition-ease-bg: background-color 0.3s ease;
+  --transition-ease-border: border-color 0.3s ease;
+}

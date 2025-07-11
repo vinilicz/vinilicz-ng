@@ -1,0 +1,17 @@
+<div class="selector" #selector [class.open]="isOpen()">
+  <button class="selector-button" (click)="toggle()">
+    {{ selectedLabel() || placeholder() }}
+    <i class="pi pi-angle-down"></i>
+  </button>
+    @if (isOpen()) {
+      <div class="selector-overlay">
+        <li class="selector-options fadein">
+          @for (option of options(); track option.value) {
+            <li class="option">
+              <button class="option-button" [class.selected]="selected() === option.value" (click)="selectValue(option)">{{ option.label }}</button>
+            </li>
+          }
+        </li>
+      </div>
+    }
+</div>

@@ -1,0 +1,26 @@
+.item {
+  border-radius: 10px;
+  display: flex;
+  gap: .5rem;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: inherit;
+  background-color: var(--theme-800);
+  padding: .5rem;
+  width: fit-content;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.item:hover {
+  background-color: var(--theme-700);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.item-image {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  overflow: hidden;
+}
