@@ -16,7 +16,6 @@
   transition: var(--transition-ease-border);
   border-style: solid;
 
-
   &:hover {
     border-color: var(--border-hover);
   }
@@ -35,7 +34,7 @@
   z-index: 10;
   min-width: fit-content;
   border-radius: var(--border-radius);
-  background-color: var(--surface-background);
+  background-color: var(--surface-overlay);
   border-color: var(--surface-border);
   border-width: var(--border-width);
   border-style: solid;
