@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, timestamp } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +12,7 @@ export class ThemeService {
   constructor() { }
 
   applyUserTheme() {
-    const theme = this.getLocalStorageTheme();
+    const theme = this.getLocalStorageTheme() || this.getUserPreferredTheme();
     if (!theme) return;
     if (theme.dark) return; // default
     this.setLightMode();
@@ -22,9 +22,14 @@ export class ThemeService {
     try {
       const rawTheme = localStorage.getItem('vl:theme');
       if (!rawTheme) return;
+      
       const parsedTheme = JSON.parse(rawTheme);
-      if (typeof parsedTheme.dark !== 'boolean') return;
-      return { dark: parsedTheme.dark };
+      const { dark, timestamp } = parsedTheme;
+      if (typeof dark !== 'boolean' || !timestamp) return;
+      
+      const now = new Date().getTime();
+      const isExpired = now - parsedTheme.timestamp > 30 * 24 * 60 * 60 * 1000;
+      if (!isExpired) return { dark };
     } catch (error) {
       console.error(error);
     }
@@ -32,7 +37,17 @@ export class ThemeService {
   }
 
   private setLocalStorageTheme(theme: { dark: boolean }) {
-    localStorage.setItem('vl:theme', JSON.stringify(theme));
+    localStorage.setItem('vl:theme', JSON.stringify({ dark: theme.dark, timestamp: new Date().getTime() }));
+  }
+
+  private getUserPreferredTheme(): { dark: boolean } | undefined {
+    try {
+      const dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      return { dark }
+    } catch (error) {
+      console.error(error);
+    }
+    return;
   }
 
   setTheme(dark: boolean) {
