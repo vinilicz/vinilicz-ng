@@ -25,7 +25,8 @@
 }
 
 .subject {
-  font-size: 1.5rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.5rem; 
 }
 
 .badges-panel {
@@ -62,6 +63,28 @@ button.badge {
 
 .badge:hover {
   color: var(--hover-font-color);
+}
+
+.fake-cursor {
+  text-align: center;
+  opacity: 0;
+  animation: cursor-blink 1s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+@keyframes cursor-blink {
+  0% {
+    opacity: 0; /* aparece suavemente */
+  }
+  25% {
+    opacity: 1; /* fica visível */
+  }
+  50% {
+    opacity: 1; /* fica visível */
+  }
+  75% {
+    opacity: 0; /* fica visível */
+  }
 }
 
 @media (max-width: 700px) {

@@ -2,6 +2,10 @@
   display: flex;
 }
 
+.text-secondary {
+  color: var(--font-color-secondary);
+}
+
 .flex-column {
   flex-direction: column;
 }

@@ -1,6 +1,11 @@
 <div class="header">
   <div class="header-content">
-    <span class="subject">Vinícius Licz</span>
+    <div class="subject">
+      <span class="text-secondary">&lt;</span>
+      <b>vinícius-licz </b>
+      <span class="text-secondary">/&gt;</span>
+      <span class="fake-cursor"> ▌</span>
+    </div>     
     <div class="right-content">
       <div class="theme-panel">
         <app-select [options]="languages" [selected]="currentLang$ | async" (selectedChange)="onSelectLanguage($event)"></app-select>
