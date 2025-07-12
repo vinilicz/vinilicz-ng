@@ -1,12 +1,17 @@
 :root.dark {
-  --surface-overlay:#1e1e1e;
-  --font-color: #ffffff;
+  // fonts
+  --font-color: var(--theme-50);
+  --font-color-secondary: var(--theme-400);
+  
+  // surfaces
   --surface-background: var(--theme-900);
-  --font-color: #ffffff;
+  --surface-overlay: var(--theme-800);
   --surface-border: var(--theme-600);
+  
+  // borders
   --border-hover: var(--theme-500);
 
-  // colors
+  // theme colors
   --theme-50: #fafafa;
   --theme-100: #f4f4f5;
   --theme-200: #e4e4e7;
