@@ -9,7 +9,7 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem;
-  background: var(--theme-950);
+  background: var(--surface-background);
   border-radius: var(--border-radius);
   border-color: var(--surface-border);
   border-width: var(--border-width);
@@ -17,12 +17,12 @@
   border-style: solid;
 
   &:hover {
-    border-color: var(--border-hover);
+    border-color: var(--hover-border-color);
   }
 }
 
 .open .selector-button {
-  border-color: var(--primary-color);
+  border-color: var(--selected-border-color);
   transition: border-color 0.1s ease;
 }
 
@@ -64,10 +64,10 @@
   border-radius: 3px;
 
   &:hover {
-    background: var(--theme-800);
+    background: var(--hover-background-color);
   }
 }
 
 .option-button.selected {
-  background: var(--primary-900);
+  background: var(--selected-background-color);
 }

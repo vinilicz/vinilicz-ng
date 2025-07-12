@@ -1,20 +1,32 @@
-// :root {
-//   --surface-card:#1e1e1e;
-//   --surface-overlay:#1e1e1e;
-//   --surface-border:#383838;
-//   --font-color: #ffffff;
-//   --surface-ground: var(--theme-900);
+:root {
+  // theme colors (tons creme suaves, estilo papel)
+  --theme-50:  #fffefc;
+  --theme-100: #fdfaf5;
+  --theme-200: #f4f0e7;
+  --theme-300: #eae5d9;
+  --theme-400: #d5cdbf;
+  --theme-500: #bfb6a7;
+  --theme-600: #a99f91;
+  --theme-700: #948a7d;
+  --theme-800: #7d7569;
+  --theme-900: #665f56;
+  --theme-950: #4f4941;
 
-//   // colors
-//   --theme-50: #fafafa;
-//   --theme-100: #f4f4f5;
-//   --theme-200: #e4e4e7;
-//   --theme-300: #d4d4d8;
-//   --theme-400: #a1a1aa;
-//   --theme-500: #71717a;
-//   --theme-600: #52525b;
-//   --theme-700: #3f3f46;
-//   --theme-800: #27272a;
-//   --theme-900: #18181b;
-//   --theme-950: #09090b;
-// }
+  // fonts
+  --font-color: var(--theme-950);
+  --font-color-secondary: var(--theme-800);
+  
+  // surfaces
+  --surface-background: var(--theme-100);
+  --surface-overlay: var(--theme-300);
+  --surface-border: var(--theme-400);
+  
+  // hovers
+  --hover-border-color: var(--theme-500);
+  --hover-background-color: var(--theme-400);
+  --hover-font-color: var(--theme-800);
+
+  // selected
+  --selected-background-color: var(--theme-500);
+  --selected-border-color: var(--theme-600);
+}
