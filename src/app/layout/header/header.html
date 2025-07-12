@@ -2,8 +2,13 @@
   <div class="header-content">
     <span class="subject">Vinícius Licz</span>
     <div class="right-content">
-      <app-select [options]="languages" [selected]="currentLang$ | async" (selectedChange)="onSelectLanguage($event)"></app-select>
-      <div class="buttons-panel">
+      <div class="theme-panel">
+        <app-select [options]="languages" [selected]="currentLang$ | async" (selectedChange)="onSelectLanguage($event)"></app-select>
+        <app-button (onClick)="toggleTheme()">
+          <i [class]="(isDarkTheme$ | async) ? 'pi pi-moon' : 'pi pi-sun'"></i>
+        </app-button>
+      </div>
+      <div class="badges-panel">
         @for (badge of contacts; track badge.contact.name) {
           @if (badge.action) {
             <button class="badge" (click)="badge.action()">

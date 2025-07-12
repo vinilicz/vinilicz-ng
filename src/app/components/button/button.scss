@@ -1,0 +1,22 @@
+button {
+  all: unset;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  background: var(--surface-background);
+  border-radius: var(--border-radius);
+  border-color: var(--surface-border);
+  border-width: var(--border-width);
+  transition: var(--transition-ease-border);
+  border-style: solid;
+  min-width: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    border-color: var(--hover-border-color);
+  }
+}

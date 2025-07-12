@@ -6,6 +6,7 @@
   padding-right: 24px;
   display: flex;
   align-items: center;
+  transition: var(--transition-ease-bg);
 }
 
 .header-content {
@@ -20,18 +21,24 @@
 .right-content {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .subject {
   font-size: 1.5rem;
 }
 
-.buttons-panel {
+.badges-panel {
   display: flex;
   gap: 1rem;
   align-items: center;
   justify-content: center;
+}
+
+.theme-panel {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
 }
 
 .badge {
@@ -64,5 +71,6 @@ button.badge {
 
   .right-content {
     flex-direction: column-reverse;
+    gap: 1rem;
   }
 }

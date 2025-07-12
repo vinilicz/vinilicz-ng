@@ -13,6 +13,7 @@ body {
   font-family: 'Inter', sans-serif;
   color: var(--font-color);
   background: var(--surface-background);
+  transition: var(--transition-ease-bg);
 }
 
 h1, h2, h3 {

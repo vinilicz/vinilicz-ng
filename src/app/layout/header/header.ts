@@ -1,4 +1,4 @@
-import { Component, inject, OnInit, signal } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { ContactInfo } from '../../types/contact-info';
 import { emailContact } from '../../constants/contacts/email';
 import { githubContact } from '../../constants/contacts/github';
@@ -9,6 +9,8 @@ import { FormsModule } from '@angular/forms';
 import { AsyncPipe } from '@angular/common';
 import { TranslateService } from '@ngx-translate/core';
 import { Select, SelectOption } from '../../components/select/select';
+import { ThemeService } from '../../theme/theme.service';
+import { Button } from '../../components/button/button';
 
 type ContactBadge = {
   contact: ContactInfo;
@@ -19,7 +21,7 @@ type ContactBadge = {
 
 @Component({
   selector: 'app-header',
-  imports: [FormsModule, AsyncPipe, Select],
+  imports: [FormsModule, AsyncPipe, Select, Button],
   templateUrl: './header.html',
   styleUrl: './header.scss'
 })
@@ -37,9 +39,11 @@ export class Header {
   }));
   
   private readonly languageService = inject(LanguageService);
+  private readonly themeService = inject(ThemeService);
   private readonly translateService = inject(TranslateService);
   
   readonly currentLang$ = this.languageService.currentLang$;
+  readonly isDarkTheme$ = this.themeService.isDarkTheme$;
 
   private async onClickEmail(email: string) {
     try {
@@ -52,6 +56,10 @@ export class Header {
 
   onSelectLanguage(lang: string) {
     this.languageService.updateLang(lang);
+  }
+
+  toggleTheme() {
+    this.themeService.toggleTheme();
   }
 
 }
