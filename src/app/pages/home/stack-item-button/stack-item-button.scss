@@ -9,7 +9,7 @@
   background-color: var(--surface-overlay);
   padding: .5rem;
   width: fit-content;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  transition: var(--transition-ease-bg), box-shadow 0.3s ease, transform 0.2s ease;
 }
 
 .item:hover {

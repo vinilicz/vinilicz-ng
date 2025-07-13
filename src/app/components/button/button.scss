@@ -9,7 +9,7 @@ button {
   border-radius: var(--border-radius);
   border-color: var(--surface-border);
   border-width: var(--border-width);
-  transition: var(--transition-ease-border);
+  transition: var(--transition-ease-bg), var(--transition-ease-border);
   border-style: solid;
   min-width: 1.5rem;
   display: flex;
